@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML di prova</title>
+</head>
+<body>
+
+    <label for="menu">Scegli un'opzione:</label>
+
+    <select id="menu">
+        <option value="">Seleziona</option>
+        <option value="opzione1">Opzione 1</option>
+        <option value="opzione2">Opzione 2</option>
+    </select>
+
+    <p>Hai scelto: <span id="risultato">---</span></p>
+
+<script>
+    document.getElementById("menu").addEventListener("change", function () {
+        const testo = this.options[this.selectedIndex].text;
+        document.getElementById("risultato").textContent = testo;
+    });
+</script>
+</body>
+</html>
